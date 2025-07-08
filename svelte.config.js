@@ -1,7 +1,12 @@
+// svelte.config.js
 import vercel from '@sveltejs/adapter-vercel';
+import { vitePreprocess } from '@sveltejs/kit/vite';
 
-export default {
+const config = {
   kit: {
     adapter: vercel()
-  }
+  },
+  preprocess: vitePreprocess()
 };
+
+export default config;
